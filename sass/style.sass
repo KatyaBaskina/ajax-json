@@ -109,10 +109,6 @@ body
                 box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2)
                 transition: .5s
 
-            &:hover .add
-                background-color: #ed8e8e
-                transition: 0.5s
-
             &:first-child
                 margin-left: 0
                 +lg-block()
@@ -156,10 +152,14 @@ body
             .sale
                 background-color: $red
                 left: 10px
+                +xs-block()
+                    left: 9px
 
             .new
                 background-color: black
                 right: 10px
+                +xs-block()
+                    right: 9px
 
             h1
                 font-size: 14px
@@ -187,10 +187,10 @@ body
 
                 &:before
                     content: ''
-                    width: 150%
+                    width: 110%
                     height: 1px
                     top: 50%
-                    left: -25%
+                    left: -5%
                     background-color: $red
                     position: absolute
 
@@ -215,6 +215,10 @@ body
                     color: $red
                     transition: 0.5s
                     font-weight: 500
+
+                    &:hover
+                        background-color: #ed8e8e
+                        transition: 0.5s
     
                 .view
                     color: #999e9f
@@ -273,7 +277,7 @@ body
                 margin:
                     left: 10px
                     right: 10px
-                padding: 35px 17px
+                padding: 35px 25px
                 padding-top: 18px
 
             +lg2-block()
@@ -290,8 +294,8 @@ body
                 width: 270px
                 min-width: 0
                 padding:
-                    left: 10px
-                    right: 10px
+                    left: 20px
+                    right: 20px
 
             &:first-child
                 margin-left: 0

@@ -38,11 +38,12 @@ function renderHTML(data){
 
 	for (i = 0; i < data['entities'].length; i++){
 		var discountCost = (data['entities'][i].discountCost) ? data['entities'][i].discountCost : data['entities'][i].cost;
+		discountCost = '$' + discountCost.toFixed(2);
 		var sale = '';
 		var new_ = '';
 		var redCost = '';
 		if(data['entities'][i].discountCost){
-			redCost = '<span class="red_cost">' + data['entities'][i].cost + '</span>';
+			redCost = '<span class="red_cost">'+ '$' + (data['entities'][i].cost).toFixed(2) + '</span>';
 			sale = '<div class="sale"><span>Sale</span></div>'
 		}
 		if(data['entities'][i].new)

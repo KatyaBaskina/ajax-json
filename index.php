@@ -23,12 +23,12 @@ require __DIR__ . "/back_end/model.php";
                         <p><?php echo $item['description']; ?></p>
                         
                         <span class="cost">
-                            <?php echo $item['discountCost'] ? $item['discountCost'] : $item['cost']; ?>
+                            $<?php echo number_format($item['discountCost'] ? $item['discountCost'] : $item['cost'], 2, '.', ''); ?>
                         </span>
 
                         <?php if ($item['discountCost'] !== null): ?>
                             <span class="red_cost">
-                                <?php echo $item['cost']; ?>
+                                $<?php echo number_format($item['cost'], 2, '.', ''); ?>
                             </span>
                             <div class="sale"><span>Sale</span></div>
                         <?php endif; ?>
